@@ -130,7 +130,15 @@ Questions:
 
 ---
 
-## 6. 전역 컨벤션 요약
+## 6. 작성 언어 정책 (Language policy)
+
+- 기본: 한글 사용
+- 영어 병기: 핵심 용어/섹션명 등 필요 시 병기 가능
+- 코드/명령어/로그/에러 메시지: 원문 유지 (번역하지 않음)
+
+---
+
+## 7. 전역 컨벤션 요약
 
 - 코드 컨벤션 상세: docs/conventions/code-style.md
 - DB 네이밍 상세: docs/conventions/db-naming.md
