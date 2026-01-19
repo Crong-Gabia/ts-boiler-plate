@@ -3,9 +3,12 @@
 이 문서는 특정 레포/도구에 종속되지 않는 **일반적인 PR 운영 규칙**입니다.
 
 ## 1) 브랜치 전략
-- 기본 브랜치: `develop` 또는 `main` 중 하나를 팀에서 고정
+- 기본 브랜치: `develop` (고정)
+- 릴리스 브랜치: `main` (릴리스/태그 컷 때만 merge)
+- PR 타깃: 항상 `develop`에 머지
 - 기능 브랜치: `feature/<short-name>`
 - 버그 수정: `fix/<short-name>`
+- 긴급 패치: `hotfix/<short-name>` → 검증 후 `develop`·`main` 순으로 머지
 
 ## 2) 커밋 메시지
 - Conventional Commits 권장
