@@ -108,14 +108,28 @@
 
 ---
 
-## 4. 병렬 실행 규약
+## 4. 에이전트/모델 설정
+
+| 에이전트 | 역할 | 모델 | 호출 방법 |
+| --- | --- | --- | --- |
+| Sisyphus | 메인 오케스트레이터 | Claude Opus 4.5 (32k) | 기본 활성화 |
+| Oracle | 아키텍처 설계, 디버깅 어드바이저 | GPT-5.2 Medium | @oracle |
+| Librarian | 공식 문서 탐색, 코드 리서치 | GLM-4.7 Free | @librarian |
+| Explore | 초고속 코드베이스 탐색 | Grok Code | @explore |
+| Frontend UI/UX | 프론트엔드 개발 전문 | Gemini 3 Pro | 자동 호출 |
+| Document-Writer | README, API 문서, 가이드 작성 | Gemini 3 Flash | 자동 호출 |
+| Multimodal-Looker | PDF, 이미지, 다이어그램 분석 | Gemini 3 Flash | 자동 호출 |
+
+---
+
+## 5. 병렬 실행 규약
 
 - **제안 → 확정 → 반영** 단계 분리
 - 파일 소유권 충돌 시 오케스트레이터가 우선권 조정
 
 ---
 
-## 5. 보고 포맷 (강제)
+## 6. 보고 포맷 (강제)
 
 ```
 Status: proposed | in_progress | blocked | ready_for_review
@@ -128,7 +142,7 @@ Questions:
 
 ---
 
-## 6. 작성 언어 정책 (Language policy)
+## 7. 작성 언어 정책 (Language policy)
 
 - 기본: 한글 사용
 - 영어 병기: 핵심 용어/섹션명 등 필요 시 병기 가능
@@ -136,7 +150,7 @@ Questions:
 
 ---
 
-## 7. 전역 컨벤션 요약
+## 8. 전역 컨벤션 요약
 
 - 코드 컨벤션 상세: docs/conventions/code-style.md
 - DB 네이밍 상세: docs/conventions/db-naming.md
