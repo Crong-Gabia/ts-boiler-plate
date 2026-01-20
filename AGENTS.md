@@ -108,17 +108,17 @@
 
 ---
 
-## 4. 에이전트/모델 설정
+## 4. 에이전트/역할별 필독 문서 매핑
 
-| 에이전트 | 역할 | 모델 | 호출 방법 |
-| --- | --- | --- | --- |
-| Sisyphus | 메인 오케스트레이터 | Claude Opus 4.5 (32k) | 기본 활성화 |
-| Oracle | 아키텍처 설계, 디버깅 어드바이저 | GPT-5.2 Medium | @oracle |
-| Librarian | 공식 문서 탐색, 코드 리서치 | GLM-4.7 Free | @librarian |
-| Explore | 초고속 코드베이스 탐색 | Grok Code | @explore |
-| Frontend UI/UX | 프론트엔드 개발 전문 | Gemini 3 Pro | 자동 호출 |
-| Document-Writer | README, API 문서, 가이드 작성 | Gemini 3 Flash | 자동 호출 |
-| Multimodal-Looker | PDF, 이미지, 다이어그램 분석 | Gemini 3 Flash | 자동 호출 |
+| 에이전트 | 역할 | 필독 문서 |
+| --- | --- | --- |
+| Sisyphus | 메인 오케스트레이터 | docs/guidelines/workflow.md, work-history/context/current.md |
+| Oracle | 아키텍처 설계/디버깅 어드바이저 | docs/conventions/typescript-style.md, docs/conventions/db-naming.md |
+| Librarian | 공식 문서/코드 리서치 | work-history/product-spec/plan.md |
+| Explore | 코드베이스 탐색 | work-history/context/current.md, docs/conventions/typescript-style.md |
+| Frontend UI/UX | 프론트엔드 개발 | docs/guidelines/ui-common-guidelines.md |
+| Document-Writer | 문서 작성 | docs/guidelines/workflow.md |
+| Multimodal-Looker | 이미지/PDF 분석 | work-history/context/current.md |
 
 ---
 
