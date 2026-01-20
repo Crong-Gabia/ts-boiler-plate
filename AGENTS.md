@@ -20,26 +20,24 @@
 - 디렉터리 규칙은 해당 디렉터리의 AGENTS.md로만 관리한다.
 - 훅(Pre/Post/Stop)은 자동화만 수행하고, 정책은 문서로 분리한다.
 
-### MUST READ (세션 시작 시)
-- `docs/guidelines/README.md`
-- `docs/conventions/typescript-style.md`
-- `docs/conventions/db-naming.md`
-- `docs/guidelines/workflow.md`
-- `work-history/context/current.md`
+### MUST READ (첫 작업 전에)
+- `AGENTS.md` (이 문서): SSOT, develop가 base, npm 사용, 버그픽스 최소 수정, 커밋/PR 룰
+- `work-history/context/current.md`: 지금 팀/레포가 뭘 하고 있는지 확인 후 필요 시 업데이트
+- `docs/guidelines/workflow.md`: 작업 흐름/PR 규칙/빌드·실행 규칙
+
+### 필요할 때만 (영역별)
+- TS 만질 때: `docs/conventions/typescript-style.md`
+- 코드 스타일 헷갈릴 때: `docs/conventions/code-style.md`
+- UI 만질 때: `docs/guidelines/ui-common-guidelines.md`
+- DB/API 만질 때: `docs/conventions/db-naming.md`
 
 ### CONTEXT LOGGING (항상)
 - 작업 시작/재개 시: `work-history/context/current.md` 업데이트
 - 의사결정 발생 시: `work-history/context/decision-log.md`에 기록
 - 막힘(Blocked) 발생 시: `work-history/context/blocked.md` 템플릿으로 기록
 
-### WHEN YOU TOUCH UI
-- `docs/guidelines/ui-common-guidelines.md`
-
 ### WHEN YOU WRITE TESTS
 - `docs/guidelines/testing.md`
-
-### WHEN YOU TOUCH API/DB
-- `docs/conventions/db-naming.md`
 
 ---
 
