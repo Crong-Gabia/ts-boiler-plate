@@ -13,6 +13,20 @@
 - 메시징(문자, 알림톡)
 - 세금계산서 API
 
+## 인증 헤더 규칙
+### 공통 (서비스 API)
+- Authorization: `Bearer {officeToken}`
+- Content-Type: `application/json`
+
+### 세금계산서 API 예외
+- Office-Authorization: `{officeToken}`
+- Bill-Access-Authorization: `{billAccessToken}`
+- Content-Type: `application/json`
+
+## 참고
+- `Authorization` 헤더 값은 Postman 예시에 `Bearer {{office_token}}` 형태로 제공됩니다.
+- 세금계산서 API는 별도 `Office-Authorization`, `Bill-Access-Authorization` 헤더를 사용합니다.
+
 ## 전자결재
 - POST https://api.hiworks.com/office/approval/documents (전자결재 기안(페이지 연동))
 - GET https://api.hiworks.com/approval/v2/documents/{{문서 번호}} (문서 상태 조회)
