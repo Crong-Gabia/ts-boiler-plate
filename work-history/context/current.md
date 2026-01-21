@@ -8,15 +8,15 @@
 - Last Updated: 2026-01-21
 
 ## What changed recently
-- SSO/하이웍스 연동가이드에 서비스 API 목록 추가 작업 진행
+- Office Token 서비스 API 문서에 세금계산서 토큰 발급/헤더 규칙 보강 작업 진행
 
 ## Decisions (latest)
-- Office Token 기반 서비스 API 목록을 별도 문서로 분리
+- Bill-Access-Authorization 발급 경로와 예외 규칙을 문서에 명시
 
 ## Next actions (1-5)
-1. Postman 문서에서 서비스 API 목록 수집
-2. Office Token 서비스 API 리스트 문서 작성
-3. 기존 SSO 가이드에 링크 추가
+1. 세금계산서 API 토큰 발급 경로 정리
+2. Bill-Access-Authorization 적용/예외 목록 추가
+3. 문서 변경사항 커밋/푸시
 
 ## Blockers
 - 

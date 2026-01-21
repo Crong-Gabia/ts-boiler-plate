@@ -23,6 +23,14 @@
 - Bill-Access-Authorization: `{billAccessToken}`
 - Content-Type: `application/json`
 
+### Bill-Access-Authorization 발급 경로
+- 세금계산서 페이지에서 사용자별 세금계산서 API 토큰을 생성합니다.
+- 발급은 API가 아닌 관리자/사용자 화면에서 수동으로 진행합니다.
+
+### Bill-Access-Authorization 적용 범위
+- 적용: 세금계산서 작성/조회/삭제, 사업자등록정보 진위 검증
+- 예외: 사업자 휴폐업 단일 조회 (`/v4/check/{사업자번호}`)는 Office-Authorization만 필요
+
 ## 참고
 - `Authorization` 헤더 값은 Postman 예시에 `Bearer {{office_token}}` 형태로 제공됩니다.
 - 세금계산서 API는 별도 `Office-Authorization`, `Bill-Access-Authorization` 헤더를 사용합니다.
