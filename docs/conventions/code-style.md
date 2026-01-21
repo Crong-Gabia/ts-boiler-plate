@@ -12,5 +12,9 @@ TypeScript 규칙은 `docs/conventions/typescript-style.md`를 단일 진실로 
 ## Type Safety
 - 타입 오류 억제 금지
 
+## JSON 요청/응답
+- 필드 명명: snake_case 고정 (요청/응답 모두)
+- 외부 API 계약이 camelCase일 때만 예외 허용
+
 ## Testing
 - 테스트 파일 네이밍/위치 규칙
