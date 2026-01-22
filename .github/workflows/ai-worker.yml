@@ -1,0 +1,52 @@
+name: ai-worker
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: GitHub issue number to process
+        required: true
+        type: string
+      base_branch:
+        description: Base branch to open PR against
+        required: true
+        default: main
+        type: string
+      openai_model:
+        description: OpenAI model name
+        required: true
+        default: gpt-4o-mini
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  ai_worker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Run AI worker
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          BASE_BRANCH: ${{ inputs.base_branch }}
+          OPENAI_MODEL: ${{ inputs.openai_model }}
+        run: node .github/scripts/ai_worker.mjs

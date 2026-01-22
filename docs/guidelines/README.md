@@ -21,3 +21,6 @@
 
 - Reference
   - [기술 스택 참고](./stack-reference.md)
+
+- Automation
+  - [개발 공정 자동화 시스템](../automation-system/README.md)
